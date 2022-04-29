@@ -13,9 +13,10 @@ export const getAllColumns = state => state.columns;
 
 export const addColumn = payload => ({type: 'ADD_COLUMN', payload});
 export const addCard = payload => ({type: 'ADD_CARD', payload});
+export const updateSearchInput = payload => ({type: 'UPDATE_SEARCHINPUT', payload});
 
 
-/* Example of memo - to remove*/
+/* Example of memoize - to remove*/
 // const selectDupa = createSelector([getFilteredCards, getAllColumns], (cards, columns) => {
 //   return {cards, columns}
 // })
@@ -27,8 +28,8 @@ const reducer = (state, action) => {
        return {...state, columns: [...state.columns, {...action.payload, id: shortid() }]}
     case 'ADD_CARD':
       return {...state, cards: [...state.cards, {...action.payload, id: shortid()}]}
-    case 'SEARCH_INPUT':      
-      return {...state, searchInput: action.searchInput};
+    case 'UPDATE_SEARCHINPUT':      
+      return {...state, searchInput: action.payload};
     default:
       return state;
   }
