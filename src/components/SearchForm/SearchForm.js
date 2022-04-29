@@ -10,8 +10,7 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({type: 'SEARCH_INPUT', searchInput})
-    setSearchInput('');
+    dispatch({type: 'SEARCH_INPUT', searchInput}) 
   }
 
   return (
