@@ -4,12 +4,15 @@ import initialState from './initialState';
 import { strContains } from '../utils/strContains';
 // import { createSelector } from '@reduxjs/toolkit';
 
+
+// selectors
 export const getFilteredCards = ({ cards, searchInput }, columnId) => cards.filter(card => card.columnId === columnId && strContains(card.title, searchInput));
 export const getAllColumns = state => state.columns;
 
 // action creators
 
 export const addColumn = payload => ({type: 'ADD_COLUMN', payload});
+export const addCard = payload => ({type: 'ADD_CARD', payload});
 
 
 /* Example of memo - to remove*/
