@@ -1,12 +1,15 @@
 @import '../../styles/settings.scss';
 
+nav {
+  background-color: darken($color-dark, 3%);
+}
+
 .nav_wrapper {
   font-size: $base-size * 2;
-  padding-left: $base-size * 10;
-  padding-right: $base-size * 10;
+  font-weight: bold;
+  margin: 0 ($base-size * 10);
   display: flex;
   justify-content: space-between;
-  background-color: darken($color-dark, 3%);
   align-items: center;
 }
 
@@ -15,5 +18,10 @@
   display:  inline-flex;
   li {
     padding: $base-size;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-light;
   }
 }
