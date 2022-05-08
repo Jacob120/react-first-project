@@ -12,16 +12,16 @@
     font-weight: bold;
 }
 
-.fav_button {
+.card_button {
     background-color: $color-light;
-    border: none;
+    border: none;    
     i {       
         transition: $transition;
         font-size: 16px;
     }
 }
 
-.fav_button:hover {
+.card_button:hover {
 
     i {
        transform: scale(1.5);
@@ -31,4 +31,3 @@
 .isFavorite {
     color: $color-favorite-icon;
 }
-    
