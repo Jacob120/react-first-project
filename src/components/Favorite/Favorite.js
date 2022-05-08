@@ -6,8 +6,7 @@ import { useSelector } from 'react-redux';
 
 const Favorite = () => {
 
-  const favCards = useSelector(state => getIsFavorite(state));
-  console.log('favCards',favCards);
+  const favCards = useSelector(state => getIsFavorite(state));  
 
   if(favCards.length === 0) return (
     <div className={styles.hero}>
